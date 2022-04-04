@@ -9,7 +9,7 @@ If a request to create a transaction doesn’t respond because of a network conn
 a client can retry the request with the same idempotency key to guarantee that no more than one transaction is created.  
 
 
-Idempotency key is sent in the Idempotency-Key header, and you should use them for all POST requests, for generating idempotency keys UUID V4 is used:  
+Idempotency key is sent in the Idempotency-Key header, and you should use them for all POST requests, for generating idempotency keys UUID V4 is used.  
 Previously executed response that’s being replayed from the server has additional   
 resonse header: Cahched-Response:true.  
 
@@ -21,6 +21,6 @@ Here, the same requests implies the same request path and body.
 Return 400 Bad request if it exists.  
 
 For production Redis distributed cache service could be used.  
-For testing purpose memory caching can be sufficient (item are stored by the app instance on the server where the app is running).  
+For testing purpose memory caching can be sufficient (items are stored by the app instance on the server where the app is running).  
 
 Idempotency keys expires out of the system after defined number of hours.
