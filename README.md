@@ -16,7 +16,7 @@ resonse header: Cahched-Response:true.
 In this implementation there are two kind of validations:  
 1)Check if there are concurrent requests with the same idempotency key.
 If so, 409 Conflict is returned.
-Here, the same requests implies the same request path and body.
+Here, the same requests implies the same request path and body.  
 2)Check if already exists cached request with the same idempotency key.   
 Return 400 Bad request if it exists.  
 
