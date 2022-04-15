@@ -15,6 +15,7 @@ public class TransactionController : ControllerBase
         _logger = logger;
     }
 
+    [ProducesResponseType(typeof(string), (int)HttpStatusCode.Conflict)]
     [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
     [ProducesResponseType(typeof(CreateTransactionResponse), (int)HttpStatusCode.OK)]
     [HttpPost]
